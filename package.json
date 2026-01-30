@@ -1,0 +1,40 @@
+{
+  "name": "pixi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "vite",
+    "build": "tsc && vite build",
+    "prepare": "husky",
+    "lint": "eslint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "pixi.js": "^8.15.0"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@pixi/devtools": "^2.0.1",
+    "@types/jest": "^30.0.0",
+    "eslint": "^9.39.2",
+    "globals": "^17.2.0",
+    "husky": "^9.1.7",
+    "jest": "^30.2.0",
+    "jiti": "^2.6.1",
+    "lint-staged": "^16.2.7",
+    "prettier": "3.8.1",
+    "ts-jest": "^29.4.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.54.0",
+    "vite": "^7.3.1"
+  }
+}
