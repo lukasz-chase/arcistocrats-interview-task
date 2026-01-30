@@ -7,6 +7,12 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 20px;
+  overflow: hidden;
+  background-color: #222;
+}
+
+canvas {
+  touch-action: none;
 }
 
 .play-button {

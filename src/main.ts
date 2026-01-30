@@ -26,11 +26,28 @@ const APP_SIZE = {
     height: APP_SIZE.height,
     width: APP_SIZE.width,
     backgroundColor: 0xffffff,
+    resolution: window.devicePixelRatio || 1,
+    autoDensity: true,
   });
 
   initDevtools(app);
 
   document.body.appendChild(app.canvas);
+
+  // Re size function to maintain aspect ratio
+  const resize = () => {
+    const scaleX = window.innerWidth / APP_SIZE.width;
+    const scaleY = (window.innerHeight * 0.75) / APP_SIZE.height;
+    const scale = Math.min(scaleX, scaleY);
+
+    const newWidth = Math.floor(APP_SIZE.width * scale);
+    const newHeight = Math.floor(APP_SIZE.height * scale);
+
+    app.canvas.style.width = `${newWidth}px`;
+    app.canvas.style.height = `${newHeight}px`;
+  };
+  window.addEventListener("resize", resize);
+  resize();
 
   const playButton = document.createElement("button");
   playButton.innerText = "Play";
